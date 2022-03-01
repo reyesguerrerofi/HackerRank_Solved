@@ -5,19 +5,32 @@ The design should have 'WELCOME' written in the center.
 The design pattern should only use |, . and - characters.
 
 '''
-N = 7
+N = 11
 M = (N*3)
 T = "WELCOME"
-print(N,M)#N alto, M ancho
+#print(N,M)#N alto, M ancho
 
 def door(N,M,T):
-    #Uso de rjust,ljust,center etc
-    tramo = (M-3)/2
+    A = 1
     for i in range(0,N):
         
-            print(M*"-")
-            print(i*3*".|.")
-            M = M - 6
+        #L = 3 * A
+        #tramo = (M-L)/2
+        #tramo1 = (M-len(T))/2
+        if i < (N-1)/2 :
+            L = 3 * A
+            tramo = (M-L)/2
+            tramo1 = (M-len(T))/2
+            print("-"* int(tramo) + ".|."* int(A) + "-"* int(tramo) )
+            #print(L,tramo,A)
+            A += 2 
+        elif i == (N-1)/2:
+            print("-"*int(tramo1) + T + "-"*int(tramo1))     
+        elif i > (N-1)/2:
+            print("-"* int(tramo) + ".|."* int(A-2) + "-"* int(tramo))
+            tramo = tramo + 3
+            A = A - 2
+
 
 
 
