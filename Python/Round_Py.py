@@ -6,9 +6,9 @@ ser redondeado al entero mas cercano.
 
 Si el valor exactamente contiene 0.5 
 debe ser sumado por 0.5
-en el negativo debe ser mas lejano al 0
+en el negativo debe ser al entero mas cercano
 
-	-23.5 -> -24
+	-23.5 -> -23
 '''
 
 
@@ -50,3 +50,12 @@ for i in range(pares_i):
 			
 for j in respuesta:
 	print(j)
+	
+'''
+En este lenguaje y en otros ya existe una 
+funcion llamada round asi que no es necesario 
+agregar tanto rollo
+aun asi lo hice asi para entender como funciona el 
+redondeo
+
+'''
